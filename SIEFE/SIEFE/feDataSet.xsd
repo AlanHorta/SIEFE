@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="feDataSet" targetNamespace="http://tempuri.org/feDataSet.xsd" xmlns:mstns="http://tempuri.org/feDataSet.xsd" xmlns="http://tempuri.org/feDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="feConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="feConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SIEFE.Properties.Settings.GlobalReference.Default.feConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="acidentesTableAdapter" GeneratorDataComponentClassName="acidentesTableAdapter" Name="acidentes" UserDataComponentName="acidentesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="feConnectionString (Settings)" DbObjectName="fe.acidentes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Rodovia`, `kmEdital`, `MunSen`, `kmReal`, `Abalroamento`, `Choque`, `Colisão`, `Tombamento`, `Capotamento`, `Incendio`, `Atropelamento` FROM `acidentes`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ponto_feTableAdapter" GeneratorDataComponentClassName="ponto_feTableAdapter" Name="ponto_fe" UserDataComponentName="ponto_feTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="feConnectionString (Settings)" DbObjectName="fe.ponto_fe" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Rodovia`, `kmEdital`, `MunSen`, `kmReal`, `Localidade`, `Municipio`, `QtdFx`, `MunA`, `MunB`, `VelFisc`, `Lat`, `Long`, `VMD`, `Vel85p`, `Tipo` FROM `ponto_fe`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tipoequipTableAdapter" GeneratorDataComponentClassName="tipoequipTableAdapter" Name="tipoequip" UserDataComponentName="tipoequipTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="feConnectionString (Settings)" DbObjectName="fe.tipoequip" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Tipo`, `Desc`, `NFaixas`, `Psimp`, `TemDisp`, `AvSinal`, `AvFxPed`, `ExVel` FROM `tipoequip`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="feDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="feDataSet" msprop:Generator_UserDSName="feDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="acidentes" msprop:Generator_TableClassName="acidentesDataTable" msprop:Generator_TableVarName="tableacidentes" msprop:Generator_TablePropName="acidentes" msprop:Generator_RowDeletingName="acidentesRowDeleting" msprop:Generator_RowChangingName="acidentesRowChanging" msprop:Generator_RowEvHandlerName="acidentesRowChangeEventHandler" msprop:Generator_RowDeletedName="acidentesRowDeleted" msprop:Generator_UserTableName="acidentes" msprop:Generator_RowChangedName="acidentesRowChanged" msprop:Generator_RowEvArgName="acidentesRowChangeEvent" msprop:Generator_RowClassName="acidentesRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ponto_fe" msprop:Generator_TableClassName="ponto_feDataTable" msprop:Generator_TableVarName="tableponto_fe" msprop:Generator_TablePropName="ponto_fe" msprop:Generator_RowDeletingName="ponto_feRowDeleting" msprop:Generator_RowChangingName="ponto_feRowChanging" msprop:Generator_RowEvHandlerName="ponto_feRowChangeEventHandler" msprop:Generator_RowDeletedName="ponto_feRowDeleted" msprop:Generator_UserTableName="ponto_fe" msprop:Generator_RowChangedName="ponto_feRowChanged" msprop:Generator_RowEvArgName="ponto_feRowChangeEvent" msprop:Generator_RowClassName="ponto_feRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tipoequip" msprop:Generator_TableClassName="tipoequipDataTable" msprop:Generator_TableVarName="tabletipoequip" msprop:Generator_TablePropName="tipoequip" msprop:Generator_RowDeletingName="tipoequipRowDeleting" msprop:Generator_RowChangingName="tipoequipRowChanging" msprop:Generator_RowEvHandlerName="tipoequipRowChangeEventHandler" msprop:Generator_RowDeletedName="tipoequipRowDeleted" msprop:Generator_UserTableName="tipoequip" msprop:Generator_RowChangedName="tipoequipRowChanged" msprop:Generator_RowEvArgName="tipoequipRowChangeEvent" msprop:Generator_RowClassName="tipoequipRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

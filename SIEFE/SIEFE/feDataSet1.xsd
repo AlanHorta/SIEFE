@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="feDataSet1" targetNamespace="http://tempuri.org/feDataSet1.xsd" xmlns:mstns="http://tempuri.org/feDataSet1.xsd" xmlns="http://tempuri.org/feDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="feConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="feConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SIEFE.Properties.Settings.GlobalReference.Default.feConnectionString1" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tplacasTableAdapter" GeneratorDataComponentClassName="tplacasTableAdapter" Name="tplacas" UserDataComponentName="tplacasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="feConnectionString1 (Settings)" DbObjectName="fe.tplacas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Rodovia`, `kmEdital`, `MunSen`, `placa1`, `dist1`, `S1`, `placa2`, `dist2`, `S2`, `placa3`, `dist3`, `S3`, `placa4`, `dist4`, `S4`, `placa5`, `dist5`, `S5`, `placa6`, `dist6`, `S6`, `placa7`, `dist7`, `S7`, `placa8`, `dist8`, `S8`, `placa9`, `dist9`, `S9`, `placa10`, `dist10`, `S10` FROM `tplacas`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="feDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="feDataSet1" msprop:Generator_UserDSName="feDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tplacas" msprop:Generator_TableClassName="tplacasDataTable" msprop:Generator_TableVarName="tabletplacas" msprop:Generator_TablePropName="tplacas" msprop:Generator_RowDeletingName="tplacasRowDeleting" msprop:Generator_RowChangingName="tplacasRowChanging" msprop:Generator_RowEvHandlerName="tplacasRowChangeEventHandler" msprop:Generator_RowDeletedName="tplacasRowDeleted" msprop:Generator_UserTableName="tplacas" msprop:Generator_RowChangedName="tplacasRowChanged" msprop:Generator_RowEvArgName="tplacasRowChangeEvent" msprop:Generator_RowClassName="tplacasRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

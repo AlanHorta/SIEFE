@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BAFE9F53-0324-482F-9C32-70402BA6E160}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SIEFE</RootNamespace>
+    <AssemblyName>SIEFE</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.95.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.95.3\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.13.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.13\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="Spire.Common, Version=10.7.2.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.XLS.10.7.2\lib\net40\Spire.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.8.40, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.XLS.10.7.2\lib\net40\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=6.7.2.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.XLS.10.7.2\lib\net40\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.XLS, Version=10.7.2.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.XLS.10.7.2\lib\net40\Spire.XLS.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="c_acidentes.cs" />
+    <Compile Include="C_CompMod.cs" />
+    <Compile Include="C_DataBase.cs" />
+    <Compile Include="C_excel.cs" />
+    <Compile Include="C_Geometria.cs" />
+    <Compile Include="C_historico.cs" />
+    <Compile Include="C_jorn.cs" />
+    <Compile Include="C_MesAno.cs" />
+    <Compile Include="C_paginas.cs" />
+    <Compile Include="C_pdf.cs" />
+    <Compile Include="C_percentuais85.cs" />
+    <Compile Include="C_percet.cs" />
+    <Compile Include="C_PistasFaixas.cs" />
+    <Compile Include="C_placas.cs" />
+    <Compile Include="C_pontoCL.cs" />
+    <Compile Include="C_pontofe.cs" />
+    <Compile Include="C_proj.cs" />
+    <Compile Include="C_risco.cs" />
+    <Compile Include="C_Rodovia.cs" />
+    <Compile Include="C_tab85p.cs" />
+    <Compile Include="C_TemFE.cs" />
+    <Compile Include="C_tipoequip.cs" />
+    <Compile Include="C_VaiTerOuJaTem.cs" />
+    <Compile Include="C_Parc85p.cs" />
+    <Compile Include="C_Vel2 .cs" />
+    <Compile Include="C_Vel.cs" />
+    <Compile Include="C_VelComp.cs" />
+    <Compile Include="C_VelMod.cs" />
+    <Compile Include="feDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>feDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="feDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>feDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Frmcadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmcadastro.Designer.cs">
+      <DependentUpon>Frmcadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDiretorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDiretorio.Designer.cs">
+      <DependentUpon>FrmDiretorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEntraArquivosVelComp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEntraArquivosVelComp.Designer.cs">
+      <DependentUpon>FrmEntraArquivosVelComp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGeraDias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGeraDias.Designer.cs">
+      <DependentUpon>FrmGeraDias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGeraDiasBApAB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGeraDiasBApAB.Designer.cs">
+      <DependentUpon>FrmGeraDiasBApAB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGeraTabelaAleat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGeraTabelaAleat.Designer.cs">
+      <DependentUpon>FrmGeraTabelaAleat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmgGeraDiasBApAB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmgGeraDiasBApAB.Designer.cs">
+      <DependentUpon>FrmgGeraDiasBApAB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGrafico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGrafico.Designer.cs">
+      <DependentUpon>FrmGrafico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIni1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIni1.Designer.cs">
+      <DependentUpon>FrmIni1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLeArquivosVelocidadeComprimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLeArquivosVelocidadeComprimento.Designer.cs">
+      <DependentUpon>frmLeArquivosVelocidadeComprimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMes.Designer.cs">
+      <DependentUpon>FrmMes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmParametros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmParametros.Designer.cs">
+      <DependentUpon>FrmParametros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPlacas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPlacas.Designer.cs">
+      <DependentUpon>FrmPlacas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSelecionaPontoFE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSelecionaPontoFE.Designer.cs">
+      <DependentUpon>FrmSelecionaPontoFE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTabPlacas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTabPlacas.Designer.cs">
+      <DependentUpon>FrmTabPlacas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegTamVel.cs" />
+    <Compile Include="RegTamVel2.cs" />
+    <Compile Include="Uteis.cs" />
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmcadastro.resx">
+      <DependentUpon>Frmcadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDiretorio.resx">
+      <DependentUpon>FrmDiretorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEntraArquivosVelComp.resx">
+      <DependentUpon>FrmEntraArquivosVelComp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGeraDias.resx">
+      <DependentUpon>FrmGeraDias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGeraDiasBApAB.resx">
+      <DependentUpon>FrmGeraDiasBApAB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGeraTabelaAleat.resx">
+      <DependentUpon>FrmGeraTabelaAleat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmgGeraDiasBApAB.resx">
+      <DependentUpon>FrmgGeraDiasBApAB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGrafico.resx">
+      <DependentUpon>FrmGrafico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIni1.resx">
+      <DependentUpon>FrmIni1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLeArquivosVelocidadeComprimento.resx">
+      <DependentUpon>frmLeArquivosVelocidadeComprimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMes.resx">
+      <DependentUpon>FrmMes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmParametros.resx">
+      <DependentUpon>FrmParametros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPlacas.resx">
+      <DependentUpon>FrmPlacas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSelecionaPontoFE.resx">
+      <DependentUpon>FrmSelecionaPontoFE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTabPlacas.resx">
+      <DependentUpon>FrmTabPlacas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="feDataSet.xsc">
+      <DependentUpon>feDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="feDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>feDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="feDataSet.xss">
+      <DependentUpon>feDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="feDataSet1.xsc">
+      <DependentUpon>feDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="feDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>feDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="feDataSet1.xss">
+      <DependentUpon>feDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel1">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

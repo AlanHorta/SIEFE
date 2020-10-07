@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SIEFE
+{
+    class C_pontoCL
+    {
+// propriedades da classe
+        string Rod;
+        string km;
+        string municipio;
+        string munA;
+        string munB;
+        int sAB;
+        int sBA;
+        int ntfaixas;
+        int nfxsent;
+ // fim propriedades da classe
+    }
+}
